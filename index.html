@@ -694,20 +694,20 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 .lp-lp .of-hero{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 10px 26px rgba(20,30,50,.18)}
 .lp-lp .of-sec{font-weight:900;font-size:16px;color:var(--lp-navy);margin:22px 0 12px}
 .lp-lp .of-sec span{color:var(--lp-green-dark)}
-.lp-lp .of-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.lp-lp .of-b{position:relative;background:#faf8ff;border:1px solid var(--lp-border);border-radius:14px;padding:10px 8px 12px}
-.lp-lp .of-b:last-child{grid-column:1/-1;max-width:50%;margin:0 auto;width:100%}
-.lp-lp .of-b img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px}
-.lp-lp .of-b p{font-size:12.5px;font-weight:700;line-height:1.3;color:var(--lp-navy);margin:8px 0 6px}
-.lp-lp .of-bn{position:absolute;top:-8px;left:8px;background:var(--lp-violet);color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px;z-index:1}
-.lp-lp .of-free{display:inline-block;background:#E8F7EE;color:var(--lp-green-dark);font-size:11px;font-weight:800;border-radius:999px;padding:3px 10px}
+.lp-lp .of-list{display:flex;flex-direction:column;gap:8px;text-align:left}
+.lp-lp .of-b{display:flex;align-items:center;gap:12px;background:#faf8ff;border:1px solid var(--lp-border);border-radius:12px;padding:8px 10px}
+.lp-lp .of-b img{flex:0 0 56px;width:56px;height:56px;aspect-ratio:1;object-fit:cover;border-radius:8px}
+.lp-lp .of-bt{flex:1;min-width:0}
+.lp-lp .of-bt p{font-size:14px;font-weight:700;line-height:1.25;color:var(--lp-navy);margin:2px 0 0}
+.lp-lp .of-bn{display:inline-block;background:var(--lp-violet);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px}
+.lp-lp .of-free{flex:0 0 auto;background:#E8F7EE;color:var(--lp-green-dark);font-size:11px;font-weight:800;border-radius:999px;padding:3px 10px}
 .lp-lp .of-price{margin:22px 0 0;background:var(--lp-green-soft);border:2px dashed var(--lp-green);border-radius:16px;padding:14px}
 .lp-lp .of-old{color:#9a93a8;font-size:15px;text-decoration:line-through}
 .lp-lp .of-now{font-size:46px;font-weight:900;color:var(--lp-green-dark);line-height:1.05;letter-spacing:-.03em}
 .lp-lp .of-pill{display:inline-block;background:var(--lp-yellow);color:#000;font-weight:800;font-size:12.5px;padding:3px 10px;border-radius:999px;margin-top:6px}
 .lp-lp .of-cta{margin:18px 0 0}
 .lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
-@media(min-width:700px){.lp-lp .of-grid{grid-template-columns:repeat(3,1fr)}.lp-lp .of-b:last-child{grid-column:auto;max-width:none}.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
+@media(min-width:700px){.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
 </style>
 <section class="of" id="elegir-pack"><div class="lp-wrap"><div class="of-card">
 <div class="of-head">🔥 Oferta de lançamento</div>
@@ -716,7 +716,7 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 <p class="of-sub">Mais de 120 projetos passo a passo, em PDF, para imprimir e montar em família.</p>
 <img alt="Mega Pack de Inventores completo com os 5 bônus" class="of-hero" decoding="async" loading="lazy" src="assets/img/offer-mega-pack.webp"/>
 <p class="of-sec">🎁 E você ainda leva <span>5 bônus de presente</span></p>
-<div class="of-grid"><div class="of-b"><span class="of-bn">BÔNUS 1</span><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><p>Plano de Inventores para 7 Dias</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 2</span><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><p>Plano de 14 dias de robótica caseira</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 3</span><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><p>Guia Rápido de Ajustes e Testes</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 4</span><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><p>Checklist de Materiais Recicláveis</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 5</span><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><p>40 Invenções para Quintal e Ar Livre</p><span class="of-free">GRÁTIS</span></div></div>
+<div class="of-list"><div class="of-b"><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 1</span><p>Plano de Inventores para 7 Dias</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 2</span><p>Plano de 14 dias de robótica caseira</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 3</span><p>Guia Rápido de Ajustes e Testes</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 4</span><p>Checklist de Materiais Recicláveis</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 5</span><p>40 Invenções para Quintal e Ar Livre</p></div><span class="of-free">GRÁTIS</span></div></div>
 <div class="of-price"><div class="of-old">De R$ 97,00 por</div><div class="of-now">R$ 10,00</div><span class="of-pill">Você economiza 90% • Pagamento único</span></div>
 <div class="of-cta"><a class="lp-btn lp-btn-yellow lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/f8t58dp" id="pk-go">Quero acessar agora →</a><div class="lp-cta-head"><b>R$ 10</b> · Pagamento único · Acesso imediato via e-mail</div></div>
 <p class="of-nota">🔒 Compra segura · 100% digital (PDF), chega na hora no seu e-mail · Garantia de 7 dias</p>

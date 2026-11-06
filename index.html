@@ -683,60 +683,43 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 .lp-lp .pk-cta{margin:22px 0 0}
 .lp-lp .pk-nota{text-align:center;font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
 </style>
-<section class="pk" id="elegir-pack"><div class="lp-wrap">
-<div class="pk-kw"><span class="lp-eyebrow">Escolha seu pack</span></div>
-<h2>Sua oferta de hoje</h2>
-<p class="pk-sub">Mega Pack com mais de 120 projetos + 5 bônus de presente, em um único pagamento.</p>
-<div class="pk-g" role="radiogroup">
-<div aria-checked="true" class="pk-c is-sel" data-pk-opt="basico" role="radio" tabindex="0">
-<div class="pk-top"><span class="pk-rad"></span><p class="pk-n">Mega Pack de Inventores + 5 bônus</p><div class="pk-pr"><span class="pk-old">R$ 97,00</span><span class="pk-now">R$ 10,00</span></div></div>
-<ul><li>+120 projetos passo a passo</li><li>5 bônus de presente</li></ul>
-</div>
-</div>
-<div class="pk-cta"><a class="lp-btn lp-btn-yellow" data-cakto="" href="https://pay.cakto.com.br/f8t58dp" id="pk-go"><span data-pk-btn="">Quero o Mega Pack</span> →</a></div>
-<p class="pk-nota">100% digital (PDF), chega na hora no seu e-mail. Pagamento único.</p>
-</div></section>
-<script>
-(function(){
-var SUELTOS=["f5285c47-8f33-4dbb-a95b-81c6b8800a39","9b36bbcd-2f6a-4835-a3bc-91bb1cd18c95","f1010423-0300-4241-af94-aa4d347c43e5","b8b8428c-6a24-4c25-ad4a-39aed8ae2889"], SEL4=SUELTOS.join(",");
-var BTN={basico:"Quero o Mega Pack",completo:"Quero o pack completo"};
-var root=document.getElementById("elegir-pack"); if(!root) return;
-var opts=root.querySelectorAll("[data-pk-opt]"), go=document.getElementById("pk-go"), lbl=root.querySelector("[data-pk-btn]");
-var sel="basico";
-function val(id){var e=document.getElementById(id);return e?e.value:null;}
-function fmt(n,pf){try{var d=pf.zeroDecimal?0:2;return (pf.prefix?pf.prefix+" ":"")+Number(n).toLocaleString(pf.locale||"es-AR",{minimumFractionDigits:d,maximumFractionDigits:d});}catch(e){return null;}}
-function init(){
-try{
-  var ups=JSON.parse(val("upsells-data")||"[]"), pf=JSON.parse(val("price-format")||"{}");
-  var main=parseFloat(val("store-main-price-num")), msav=parseFloat(val("store-main-savings-num")||"0");
-  var by={}; for(var i=0;i<ups.length;i++){by[ups[i].id]=ups[i];}
-  var suel=0, orig=0, ok=main>0;
-  for(var j=0;j<SUELTOS.length;j++){ var u=by[SUELTOS[j]]; if(u){ suel+=u.price; orig+=u.price+(u.savings||0); } else ok=false; }
-  if(ok){
-    var tot=main+suel, pct=Math.round((1-suel/orig)*100), a=fmt(tot,pf);
-    if(a){ root.querySelector("[data-pk-now]").textContent=a; }
-    if(pct>0){ root.querySelector("[data-pk-off]").textContent="Os 4 cadernos com %P% OFF".replace("%P%",pct+"%"); }
-  }else{
-    var c2=root.querySelector('[data-pk-opt="completo"]'); if(c2){ c2.style.display="none"; }
-  }
-}catch(e){}
-}
-if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}
-function pick(k){
-  sel=k;
-  for(var i=0;i<opts.length;i++){var on=opts[i].getAttribute("data-pk-opt")===k;opts[i].classList.toggle("is-sel",on);opts[i].setAttribute("aria-checked",on?"true":"false");}
-  if(lbl) lbl.textContent=BTN[k];
-  var ids=k==="completo"?SUELTOS.slice():[];
-  try{sessionStorage.setItem("impultienda_upsells",JSON.stringify(ids));}catch(x){}
-  if(go){ go.setAttribute("href","https://pay.cakto.com.br/f8t58dp"); }
-}
-for(var i=0;i<opts.length;i++){(function(o){
-  o.addEventListener("click",function(){pick(o.getAttribute("data-pk-opt"));});
-  o.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(o.getAttribute("data-pk-opt"));}});
-})(opts[i]);}
-
-})();
-</script>
+<style>
+.lp-lp .of{padding:44px 0 40px;background:linear-gradient(180deg,#f3efff 0%,#fffdf8 100%)}
+.lp-lp .of-card{background:#fff;border:3px solid var(--lp-green);border-radius:22px;box-shadow:0 18px 44px rgba(91,61,245,.18);overflow:hidden;max-width:640px;margin:0 auto}
+.lp-lp .of-head{background:var(--lp-violet);color:#fff;text-align:center;padding:12px 14px;font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.lp-lp .of-body{padding:18px 16px 22px;text-align:center}
+.lp-lp .of-body h2{font-size:24px;margin:0 0 4px}
+.lp-lp .of-sub{color:var(--lp-ink-soft);font-size:15px;margin:0 0 12px}
+.lp-lp .of-hero{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 10px 26px rgba(20,30,50,.18)}
+.lp-lp .of-sec{font-weight:900;font-size:16px;color:var(--lp-navy);margin:22px 0 12px}
+.lp-lp .of-sec span{color:var(--lp-green-dark)}
+.lp-lp .of-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.lp-lp .of-b{position:relative;background:#faf8ff;border:1px solid var(--lp-border);border-radius:14px;padding:10px 8px 12px}
+.lp-lp .of-b:last-child{grid-column:1/-1;max-width:50%;margin:0 auto;width:100%}
+.lp-lp .of-b img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px}
+.lp-lp .of-b p{font-size:12.5px;font-weight:700;line-height:1.3;color:var(--lp-navy);margin:8px 0 6px}
+.lp-lp .of-bn{position:absolute;top:-8px;left:8px;background:var(--lp-violet);color:#fff;font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px;z-index:1}
+.lp-lp .of-free{display:inline-block;background:#E8F7EE;color:var(--lp-green-dark);font-size:11px;font-weight:800;border-radius:999px;padding:3px 10px}
+.lp-lp .of-price{margin:22px 0 0;background:var(--lp-green-soft);border:2px dashed var(--lp-green);border-radius:16px;padding:14px}
+.lp-lp .of-old{color:#9a93a8;font-size:15px;text-decoration:line-through}
+.lp-lp .of-now{font-size:46px;font-weight:900;color:var(--lp-green-dark);line-height:1.05;letter-spacing:-.03em}
+.lp-lp .of-pill{display:inline-block;background:var(--lp-yellow);color:#000;font-weight:800;font-size:12.5px;padding:3px 10px;border-radius:999px;margin-top:6px}
+.lp-lp .of-cta{margin:18px 0 0}
+.lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
+@media(min-width:700px){.lp-lp .of-grid{grid-template-columns:repeat(3,1fr)}.lp-lp .of-b:last-child{grid-column:auto;max-width:none}.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
+</style>
+<section class="of" id="elegir-pack"><div class="lp-wrap"><div class="of-card">
+<div class="of-head">🔥 Oferta de lançamento</div>
+<div class="of-body">
+<h2>Mega Pack de Inventores <span class="lp-hl">+ 5 bônus</span></h2>
+<p class="of-sub">Mais de 120 projetos passo a passo, em PDF, para imprimir e montar em família.</p>
+<img alt="Mega Pack de Inventores completo com os 5 bônus" class="of-hero" decoding="async" loading="lazy" src="assets/img/offer-mega-pack.webp"/>
+<p class="of-sec">🎁 E você ainda leva <span>5 bônus de presente</span></p>
+<div class="of-grid"><div class="of-b"><span class="of-bn">BÔNUS 1</span><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><p>Plano de Inventores para 7 Dias</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 2</span><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><p>Plano de 14 dias de robótica caseira</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 3</span><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><p>Guia Rápido de Ajustes e Testes</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 4</span><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><p>Checklist de Materiais Recicláveis</p><span class="of-free">GRÁTIS</span></div><div class="of-b"><span class="of-bn">BÔNUS 5</span><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><p>40 Invenções para Quintal e Ar Livre</p><span class="of-free">GRÁTIS</span></div></div>
+<div class="of-price"><div class="of-old">De R$ 97,00 por</div><div class="of-now">R$ 10,00</div><span class="of-pill">Você economiza 90% • Pagamento único</span></div>
+<div class="of-cta"><a class="lp-btn lp-btn-yellow" data-cakto="" href="https://pay.cakto.com.br/f8t58dp" id="pk-go"><span data-pk-btn="">Quero o Mega Pack</span> →</a></div>
+<p class="of-nota">🔒 Compra segura · 100% digital (PDF), chega na hora no seu e-mail · Garantia de 7 dias</p>
+</div></div></div></section>
 <section class="lp-faq lp-alt">
 <div aria-hidden="true" class="lp-divider"><span>❓</span></div>
 <div class="lp-wrap">

@@ -499,9 +499,10 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 <div aria-hidden="true" class="lp-divider"><span>⏳</span></div>
 <div class="lp-wrap">
 <div class="lp-timer-banner">
-<div class="lp-timer-label">Oferta de lançamento termina em</div>
-<div class="lp-timer-clock" id="inline-timer">09:44</div>
-<p>Depois desse tempo, o preço volta para R$ 97,00.</p>
+<div class="lp-timer-label">Oferta de lançamento termina hoje em</div>
+<div class="lp-timer-date" id="timer-date" style="font-weight:800;font-size:15px;margin:2px 0 4px"></div>
+<div class="lp-timer-clock" id="inline-timer">00:00:00</div>
+<p>Depois disso, o preço volta para R$ 97,00.</p>
 </div>
 </div>
 </section>
@@ -761,28 +762,30 @@ function pause(){car.classList.add('is-paused');clearTimeout(h);h=setTimeout(fun
 <script>
 (function () {
 var sticky = document.querySelector('.lp-sticky');
-var bonosMarker = document.getElementById('bonos-marker');
-if (!sticky || !bonosMarker) return;
-function updateStickyVisibility() {
-var markerRect = bonosMarker.getBoundingClientRect();
-sticky.classList.toggle('is-visible', window.scrollY > 420);
-}
+if (sticky) {
+function updateStickyVisibility() { sticky.classList.toggle('is-visible', window.scrollY > 420); }
 updateStickyVisibility();
 window.addEventListener('scroll', updateStickyVisibility, { passive:true });
 window.addEventListener('resize', updateStickyVisibility);
+}
 var timerEl = document.getElementById('sticky-timer');
 var inlineTimerEl = document.getElementById('inline-timer');
-var remaining = 9 * 60 + 44;
-function tickStickyTimer() {
-var minutes = Math.floor(remaining / 60);
-var seconds = remaining % 60;
-var text = String(minutes).padStart(2,'0') + ':' + String(seconds).padStart(2,'0');
+var dateEl = document.getElementById('timer-date');
+function pad(n){ return String(n).padStart(2,'0'); }
+function endOfToday(){ var d = new Date(); d.setHours(23,59,59,999); return d; }
+if (dateEl) {
+var t = new Date().toLocaleDateString('pt-BR', { weekday:'long', day:'numeric', month:'long' });
+dateEl.textContent = 'Só hoje · ' + t.charAt(0).toUpperCase() + t.slice(1);
+}
+function tick() {
+var ms = Math.max(0, endOfToday().getTime() - Date.now());
+var total = Math.floor(ms / 1000);
+var text = pad(Math.floor(total / 3600)) + ':' + pad(Math.floor((total % 3600) / 60)) + ':' + pad(total % 60);
 if (timerEl) timerEl.textContent = text;
 if (inlineTimerEl) inlineTimerEl.textContent = text;
-if (remaining > 0) remaining -= 1;
 }
-tickStickyTimer();
-setInterval(tickStickyTimer, 1000);
+tick();
+setInterval(tick, 1000);
 })();
 </script>
 <script>

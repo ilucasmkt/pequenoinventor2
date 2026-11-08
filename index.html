@@ -589,7 +589,7 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 .lp-lp .pk-nota{text-align:center;font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
 </style>
 <style>
-.lp-lp .of{padding:44px 0 40px;background:linear-gradient(180deg,#f3efff 0%,#fffdf8 100%)}
+.lp-lp .of{padding:12px 0 40px;background:linear-gradient(180deg,#f3efff 0%,#fffdf8 100%)}
 .lp-lp .of-card{background:#fff;border:3px solid var(--lp-green);border-radius:22px;box-shadow:0 18px 44px rgba(91,61,245,.18);overflow:hidden;max-width:640px;margin:0 auto}
 .lp-lp .of-head{background:var(--lp-violet);color:#fff;text-align:center;padding:12px 14px;font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 .lp-lp .of-body{padding:12px 14px 16px;text-align:center}
@@ -628,6 +628,27 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 .lp-lp .o10-pill{background:#fee2e2;color:#991b1b}
 .lp-lp .lp-btn-gray{background:#e5e7eb;color:#1f2937;border:1px solid #cfd3da;font-size:16px;padding:14px 12px;border-radius:12px;font-weight:800;box-shadow:none}
 .lp-lp .o10-back{display:block;margin-top:14px;font-size:15px;font-weight:800;color:var(--lp-violet);text-decoration:none;padding:8px}
+.lp-lp #elegir-pack .of-sub{display:none}
+.lp-lp #elegir-pack .of-body{padding:10px 12px 12px}
+.lp-lp #elegir-pack .of-head{padding:8px 12px;font-size:12.5px}
+.lp-lp #elegir-pack .of-body h2{font-size:19px;line-height:1.15;margin:0 0 8px}
+.lp-lp #elegir-pack .of-hero{width:auto;height:140px;max-width:100%}
+.lp-lp #elegir-pack .of-sec{font-size:13.5px;margin:8px 0 5px}
+.lp-lp #elegir-pack .of-list{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.lp-lp #elegir-pack .of-b{gap:8px;padding:5px 7px;align-items:center}
+.lp-lp #elegir-pack .of-b img{flex:0 0 34px;width:34px;height:34px}
+.lp-lp #elegir-pack .of-bt p{font-size:11px;line-height:1.15;margin:1px 0 0}
+.lp-lp #elegir-pack .of-bn{font-size:8.5px;padding:1px 6px}
+.lp-lp #elegir-pack .of-free{display:none}
+.lp-lp #elegir-pack .of-price{margin:10px 0 0;padding:5px 10px}
+.lp-lp #elegir-pack .of-old{font-size:12px}
+.lp-lp #elegir-pack .of-now{font-size:30px}
+.lp-lp #elegir-pack .of-pill{margin-top:3px}
+.lp-lp #elegir-pack .of-cta{margin:8px 0 0}
+.lp-lp #elegir-pack .of-cta .lp-btn-xl{padding:11px 12px}
+.lp-lp #elegir-pack .of-cta .lp-cta-head{font-size:12.5px;margin-top:6px}
+.lp-lp #elegir-pack .of-only{margin-top:6px;padding:10px 12px}
+.lp-lp #elegir-pack .of-nota{font-size:11px;margin-top:6px}
 .lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
 @media(min-width:700px){.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
 </style>
@@ -637,7 +658,7 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 <h2>Mega Pack de Inventores <span class="lp-hl">+ 5 bônus + 4 cadernos</span></h2>
 <p class="of-sub">Mais de 120 projetos passo a passo, em PDF, para imprimir e montar em família.</p>
 <img alt="Mega Pack de Inventores completo com os 5 bônus" class="of-hero" decoding="async" loading="lazy" src="assets/img/offer-mega-pack.webp"/>
-<p class="of-sec">🎁 E você ainda leva <span>5 bônus + 4 cadernos extras</span></p>
+<p class="of-sec">🎁 Você também leva <span>de presente:</span></p>
 <div class="of-list"><div class="of-b"><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 1</span><p>Plano de Inventores para 7 Dias</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 2</span><p>Plano de 14 dias de robótica caseira</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 3</span><p>Guia Rápido de Ajustes e Testes</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 4</span><p>Checklist de Materiais Recicláveis</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 5</span><p>40 Invenções para Quintal e Ar Livre</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Os 4 Cadernos de Atividades" loading="lazy" src="assets/img/offer-cadernos.webp"/><div class="of-bt"><span class="of-bn">EXTRA</span><p>Os 4 Cadernos: +154 atividades sem telas</p></div><span class="of-free">INCLUSO</span></div></div>
 <div class="of-price"><div class="of-old">De R$ 97,00 por</div><div class="of-now">R$ 19,00</div><span class="of-pill">Você economiza 80% · tudo incluso</span></div>
 <div class="of-cta"><a class="lp-btn lp-btn-yellow lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/3fgc2qe" id="pk-go">Quero tudo por R$ 19 →</a><div class="lp-cta-head">Pagamento único · Acesso imediato via e-mail</div>

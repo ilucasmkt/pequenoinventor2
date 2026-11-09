@@ -671,19 +671,46 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 @keyframes of19pulse{0%,100%{transform:scale(1);box-shadow:0 6px 16px rgba(22,160,90,.25)}50%{transform:scale(1.025);box-shadow:0 8px 22px rgba(22,160,90,.38)}}
 .lp-lp #pk-go{animation:of19pulse 2.8s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.lp-lp #pk-go{animation:none}}
+
+.lp-lp .of-head2{display:flex;align-items:center;justify-content:space-between;gap:8px;text-align:left}
+.lp-lp .of-star{background:var(--lp-yellow);color:#000;font-size:10.5px;font-weight:900;padding:3px 9px;border-radius:999px;letter-spacing:.02em;white-space:nowrap}
+.lp-lp .of-main{display:flex;align-items:center;gap:8px;background:#E8F7EE;border:1px solid #bfe6cf;border-radius:12px;padding:6px 10px;margin-top:10px;text-align:left}
+.lp-lp .of-main p{flex:1;margin:0;font-size:13px;font-weight:800;color:#14532d;line-height:1.2}
+.lp-lp .of-mi{flex:0 0 22px;height:22px;border-radius:50%;background:#16a34a;color:#fff;font-weight:900;font-size:12px;display:flex;align-items:center;justify-content:center}
+.lp-lp .of-val{font-size:10.5px;font-weight:800;color:#9a93a8;white-space:nowrap}
+.lp-lp .of-val s{text-decoration:line-through}
+.lp-lp .of-bt{display:flex;flex-wrap:wrap;align-items:center;gap:2px 5px}.lp-lp .of-bt p{flex:0 0 100%}
+.lp-lp .of-hot{background:var(--lp-yellow);color:#000;font-size:8.5px;font-weight:900;padding:1px 6px;border-radius:999px;white-space:nowrap}
+.lp-lp .of-b-hot{border:2px solid var(--lp-yellow);background:#fffbe8}
+.lp-lp .of-pp{font-size:12px;font-weight:800;color:var(--lp-green-dark);margin-top:4px}
+.lp-lp .of-seal{display:inline-block;margin-top:6px;font-size:12px;font-weight:800;color:#14532d;background:#E8F7EE;border:1px solid #bfe6cf;border-radius:999px;padding:3px 12px}
+.lp-lp .o10-up{margin:10px 0 0;background:#E8F7EE;border:1px solid #bfe6cf;border-radius:12px;padding:8px 10px;font-size:13px;color:#14532d;line-height:1.25}
+
+.lp-lp #elegir-pack .of-head2{font-size:11px;letter-spacing:.02em}
+.lp-lp #elegir-pack .of-star{font-size:9.5px;padding:3px 8px}
+.lp-lp #elegir-pack .of-hero{height:104px}
+.lp-lp #elegir-pack .of-main{margin-top:7px;padding:4px 8px}
+.lp-lp #elegir-pack .of-main p{font-size:12px}
+.lp-lp #elegir-pack .of-bt{gap:1px 4px}
+.lp-lp #elegir-pack .of-bt p{font-size:10.5px}
+.lp-lp .of-b{position:relative}
+.lp-lp .of-hot{position:absolute;top:-8px;right:8px;z-index:1}
+.lp-lp #elegir-pack .of-old{font-size:11.5px;text-decoration:none}
+.lp-lp #elegir-pack .of-seal{background:none;border:0;padding:0;margin-top:4px;font-size:11.5px}
+.lp-lp #oferta-10 .o10-up{margin-top:8px;padding:6px 8px;font-size:12px}
 .lp-lp .of-nota{font-size:12.5px;color:var(--lp-ink-soft);margin:10px 0 0}
 @media(min-width:700px){.lp-lp .of-body h2{font-size:28px}.lp-lp .of-body{padding:24px 28px 28px}}
 </style>
 <section class="of" id="elegir-pack"><div class="lp-wrap"><div class="of-card">
-<div class="of-head">🔥 Oferta de lançamento</div>
+<div class="of-head of-head2"><span>🔥 Oferta de lançamento</span><span class="of-star">⭐ MAIS ESCOLHIDO</span></div>
 <div class="of-body">
 <h2>Mega Pack de Inventores <span class="lp-hl">+ 6 bônus</span></h2>
 <p class="of-sub">Mais de 120 projetos passo a passo, em PDF, para imprimir e montar em família.</p>
-<img alt="Mega Pack de Inventores completo com os 5 bônus" class="of-hero" decoding="async" loading="lazy" src="assets/img/offer-mega-pack.webp"/>
-<p class="of-sec">🎁 Você também leva <span>de presente:</span></p>
-<div class="of-list"><div class="of-b"><img alt="Os 4 Cadernos de Atividades" loading="lazy" src="assets/img/offer-cadernos.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 1</span><p>Os 4 Cadernos: +154 atividades sem telas</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 2</span><p>40 Invenções para Quintal e Ar Livre</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 3</span><p>Checklist de Materiais Recicláveis</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 4</span><p>Guia Rápido de Ajustes e Testes</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 5</span><p>Plano de Inventores para 7 Dias</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 6</span><p>Plano de 14 dias de robótica caseira</p></div><span class="of-free">GRÁTIS</span></div></div>
-<div class="of-price"><div class="of-old">De R$ 97,00 por</div><div class="of-now">R$ 19,00</div><span class="of-pill">Você economiza 80% · tudo incluso</span></div>
-<div class="of-cta"><a class="lp-btn lp-btn-green lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/3fgc2qe" id="pk-go">Quero tudo por R$ 19 →</a><div class="lp-cta-head">Pagamento único · Acesso imediato via e-mail</div>
+<img alt="Mega Pack de Inventores completo com os bônus" class="of-hero" decoding="async" loading="lazy" src="assets/img/offer-mega-pack.webp"/>
+<div class="of-main"><span class="of-mi">✓</span><p>+120 projetos passo a passo em PDF</p><span class="of-val"><s>R$ 47</s></span></div> <p class="of-sec">🎁 Você também leva <span>de presente:</span></p>
+<div class="of-list"><div class="of-b of-b-hot"><img alt="Os 4 Cadernos de Atividades" loading="lazy" src="assets/img/offer-cadernos.webp"/><div class="of-bt"><span class="of-hot">⭐ MAIS QUERIDO</span><span class="of-bn">BÔNUS 1</span> <span class="of-val"><s>R$ 37</s></span><p>Os 4 Cadernos: +154 atividades sem telas</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="40 Invenções para Quintal e Ar Livre" loading="lazy" src="assets/img/offer-b5.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 2</span> <span class="of-val"><s>R$ 27</s></span><p>40 Invenções para Quintal e Ar Livre</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Checklist de Materiais Recicláveis" loading="lazy" src="assets/img/offer-b4.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 3</span> <span class="of-val"><s>R$ 17</s></span><p>Checklist de Materiais Recicláveis</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Guia Rápido de Ajustes e Testes" loading="lazy" src="assets/img/offer-b3.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 4</span> <span class="of-val"><s>R$ 17</s></span><p>Guia Rápido de Ajustes e Testes</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de Inventores para 7 Dias" loading="lazy" src="assets/img/offer-b1.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 5</span> <span class="of-val"><s>R$ 27</s></span><p>Plano de Inventores para 7 Dias</p></div><span class="of-free">GRÁTIS</span></div><div class="of-b"><img alt="Plano de 14 dias de robótica caseira" loading="lazy" src="assets/img/offer-b2.webp"/><div class="of-bt"><span class="of-bn">BÔNUS 6</span> <span class="of-val"><s>R$ 27</s></span><p>Plano de 14 dias de robótica caseira</p></div><span class="of-free">GRÁTIS</span></div></div>
+<div class="of-price"><div class="of-old">Tudo isso vale <s>R$ 199,00</s> · hoje por</div><div class="of-now">R$ 19,00</div><span class="of-pill">90% OFF · menos de R$ 0,16 por projeto</span></div>
+<div class="of-cta"><a class="lp-btn lp-btn-green lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/3fgc2qe" id="pk-go">Quero tudo por R$ 19 →</a><div class="lp-cta-head">Pagamento único · Acesso imediato via e-mail</div><div class="of-seal">🛡️ Garantia de 7 dias · risco zero</div>
 <a class="of-only" href="#oferta-10">Quero somente os 120 projetos por R$ 10,00</a></div>
 <p class="of-nota">🔒 Compra segura · 100% digital (PDF), chega na hora no seu e-mail · Garantia de 7 dias</p>
 
@@ -697,7 +724,7 @@ window.INVENTALAB_REAL_SALES = window.INVENTALAB_REAL_SALES || [
 <div class="o10-ok"><span class="o10-oi">✓</span><p>+120 projetos passo a passo em PDF</p><span class="o10-in">INCLUSO</span></div>
 <div class="o10-list"><div class="o10-x"><span class="o10-xi">✕</span><p>Os 4 Cadernos: +154 atividades sem telas</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>40 Invenções para Quintal e Ar Livre</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Checklist de Materiais Recicláveis</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Guia Rápido de Ajustes e Testes</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Plano de Inventores para 7 Dias</p><span class="o10-na">NÃO INCLUSO</span></div><div class="o10-x"><span class="o10-xi">✕</span><p>Plano de 14 dias de robótica caseira</p><span class="o10-na">NÃO INCLUSO</span></div></div>
 <div class="of-price o10-price"><div class="of-now">R$ 10,00</div><span class="of-pill o10-pill">Sem bônus e sem cadernos</span></div>
-<div class="of-cta"><a class="lp-btn lp-btn-yellow lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/f8t58dp">Quero só os 120 projetos por R$ 10</a></div>
+<div class="o10-up">💡 Por só <b>R$ 9 a mais</b> você leva os 6 bônus, que valem <b>R$ 152</b></div><div class="of-cta"><a class="lp-btn lp-btn-yellow lp-btn-xl" data-cakto="" href="https://pay.cakto.com.br/f8t58dp">Quero só os 120 projetos por R$ 10</a></div>
 <a class="o10-back" href="#elegir-pack">← Voltar e levar tudo por R$ 19</a>
 </div></div></div></section>
 
